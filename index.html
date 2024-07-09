@@ -1,99 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information about the page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar Example</title>
+    <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- Link to FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar">
+        <!-- Left side of the navbar -->
         <div class="navbar-left">
+            <!-- Email link -->
             <a href="mailto:hi@mylifemku" class="link-tab">hi@mylifemku</a>
         </div>
+        <!-- Center of the navbar -->
         <div class="navbar-center">
+            <!-- Smile icon -->
             <i class="fas fa-smile"></i>
         </div>
-        <div class="navbar-right">
+        <!-- Right side of the navbar, initially hidden on smaller screens -->
+        <div class="navbar-right" id="navbar-links">
+            <!-- Navigation links -->
             <a href="#projects">Projects</a>
             <a href="#journey">Journey</a>
             <a href="#service">Service</a>
             <a href="#contact">Contact</a>
         </div>
+        <!-- Hamburger menu for smaller screens -->
+        <div class="hamburger" id="hamburger">
+            <!-- Bars icon -->
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
+    <!-- Hero section -->
     <section class="hero">
+        <!-- Left side of the hero section -->
         <div class="hero-left">
+            <!-- Image in the hero section -->
             <img src="./images/favorite.jpeg" alt="Hero Image">
         </div>
+        <!-- Right side of the hero section -->
         <div class="hero-right">
+            <!-- Heading -->
             <h1>An Interactive Designer</h1>
+            <!-- Paragraph -->
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+            <!-- Buttons in the hero section -->
             <div class="hero-buttons">
+                <!-- Book a Call button -->
                 <button>Book a Call</button>
+                <!-- Link to works section -->
                 <a href="#my-works">My Works</a>
             </div>
+            <!-- Social media links -->
             <div class="hero-social">
+                <!-- Follow me text -->
                 <p>Follow me on</p>
+                <!-- LinkedIn link -->
                 <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <!-- Dribbble link -->
                 <a href="https://www.dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a>
+                <!-- Twitter link -->
                 <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
-
-
-
-
     </section>
 
+    <!-- Clients section -->
     <section class="clients">
-        
+        <!-- Horizontal line -->
         <hr class="title-line">
-        <h2 class ="text-center-client">My recent Clients</h2>
+        <!-- Heading -->
+        <h2 class="text-center-client">My recent Clients</h2>
+        <!-- Client logos -->
         <div class="clients-logos">
+            <!-- First group of clients -->
             <div class="client-group">
+                <!-- Google icon and text -->
                 <i class="fab fa-google"></i> Google
+                <!-- Dribbble icon and text -->
                 <i class="fab fa-dribbble"></i> Dribbble
+                <!-- Mailchimp icon and text -->
                 <i class="fab fa-mailchimp"></i> Mailchimp
+                <!-- Dribbble icon and text -->
                 <i class="fab fa-dribbble"></i> Dribbble
             </div>
+            <!-- Second group of clients -->
             <div class="client-group">
+                <!-- Mailchimp icon and text -->
                 <i class="fab fa-mailchimp"></i> Mailchimp
+                <!-- Twitter icon and text -->
                 <i class="fab fa-twitter"></i> Twitter
+                <!-- Instagram icon and text -->
                 <i class="fab fa-instagram"></i> Instagram
+                <!-- Mailchimp icon and text -->
                 <i class="fab fa-mailchimp"></i> Mailchimp
             </div>
         </div>
     </section>
 
+    <!-- Short text section -->
     <section class="short text">
+        <!-- Heading -->
         <h2 class="center-title-specialists">Specialists</h2>
+        <!-- Description -->
         <p class="desc-specialists">In publishing and graphic design, Lorem ipsum is a placeholder <br>text commonly used to demonstrate the visual form of a document or a typeface</p>
     </section>
 
+    <!-- Card content section -->
     <section class="card-content">
         <!-- Card 1 -->
         <div class="class-img-container">
-            <!-- Bulb icon from FontAwesome -->
+            <!-- Bulb icon -->
             <i class="fas fa-lightbulb card-icon"></i>
+            <!-- Card title -->
             <h1>Product Design</h1>
+            <!-- Card description -->
             <p>In publishing and graphic design, Lorem ipsum is a placeholder <br>text commonly used to demonstrate the visual form of a document or a typeface</p>
         </div>
         <!-- Card 2 -->
         <div class="class-img-container">
-            <!-- Bulb icon from FontAwesome -->
+            <!-- Bulb icon -->
             <i class="fas fa-lightbulb card-icon"></i>
+            <!-- Card title -->
             <h1>Product Design</h1>
+            <!-- Card description -->
             <p>In publishing and graphic design, Lorem ipsum is a placeholder <br>text commonly used to demonstrate the visual form of a document or a typeface</p>
         </div>
         <!-- Card 3 -->
         <div class="class-img-container">
-            <!-- Bulb icon from FontAwesome -->
+            <!-- Bulb icon -->
             <i class="fas fa-lightbulb card-icon"></i>
+            <!-- Card title -->
             <h1>Product Design</h1>
+            <!-- Card description -->
             <p>In publishing and graphic design, Lorem ipsum is a placeholder <br>text commonly used to demonstrate the visual form of a document or a typeface</p>
         </div>
     </section>
+
+    <!-- JavaScript to toggle the navbar links on smaller screens -->
+    <script>
+        // Get the hamburger menu element
+        const hamburger = document.getElementById('hamburger');
+        // Get the navbar links element
+        const navbarLinks = document.getElementById('navbar-links');
+
+        // Add a click event listener to the hamburger menu
+        hamburger.addEventListener('click', () => {
+            // Toggle the 'active' class on the navbar links element
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

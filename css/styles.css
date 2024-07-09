@@ -1,7 +1,9 @@
+/* Apply box-sizing to all elements */
 * {
   box-sizing: border-box;
 }
 
+/* Reset margin and set font for the body */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -9,6 +11,7 @@ body {
   width: 100%;
 }
 
+/* Navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -18,6 +21,7 @@ body {
   color: white;
 }
 
+/* Navbar sections */
 .navbar-left,
 .navbar-center,
 .navbar-right {
@@ -25,12 +29,14 @@ body {
   align-items: center;
 }
 
+/* Margin for navbar items */
 .navbar-left i,
 .navbar-center i,
 .navbar-right a {
   margin-right: 10px;
 }
 
+/* Navbar links */
 .navbar a {
   color: white;
   text-decoration: none;
@@ -38,10 +44,12 @@ body {
   transition: color 0.3s;
 }
 
+/* Hover effect for navbar links */
 .navbar a:hover {
   color: #ff6347;
 }
 
+/* Hero section styles */
 .hero {
   display: flex;
   align-items: center;
@@ -49,25 +57,30 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Hero left side (image) */
 .hero-left {
   flex: 1;
 }
 
+/* Hero image */
 .hero-left img {
   max-width: 100%;
   height: auto;
 }
 
+/* Hero right side (text) */
 .hero-right {
   flex: 2;
   padding-left: 20px;
 }
 
+/* Hero heading */
 .hero-right h1 {
   font-size: 36px;
   margin-bottom: 20px;
 }
 
+/* Hero paragraph */
 .hero-right p {
   font-size: 18px;
   line-height: 1.6;
@@ -76,12 +89,14 @@ body {
   margin-bottom: 20px;
 }
 
+/* Hero buttons container */
 .hero-buttons {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
+/* Button styles */
 .hero-buttons button {
   background-color: blue;
   color: white;
@@ -91,30 +106,36 @@ body {
   margin-right: 10px;
 }
 
+/* Link styles */
 .hero-buttons a {
   color: blue;
   text-decoration: none;
 }
 
+/* Social media container */
 .hero-social {
   display: flex;
   align-items: center;
 }
 
+/* Social media text */
 .hero-social p {
   margin-right: 10px;
 }
 
+/* Social media icons */
 .hero-social a {
   color: #333;
   font-size: 20px;
   margin-right: 10px;
 }
 
+/* Social media hover effect */
 .hero-social a:hover {
   color: #0077b5;
 }
 
+/* Clients section styles */
 .clients {
   padding: 50px 20px;
   background-color: #fff;
@@ -122,33 +143,39 @@ body {
   text-align: center;
 }
 
+/* Horizontal line in the clients section */
 .title-line {
   display: flex;
   flex-direction: row-reverse;
 }
 
+/* Title line for clients header */
 .clients-header hr {
   border: 1px solid #ccc;
   margin-right: 10px;
   width: 50px;
 }
 
+/* Clients section heading */
 .text-center-client {
   margin-top: 30px;
   font-size: 40px;
 }
 
+/* Clients header text */
 .clients-header p {
   font-size: 20px;
   font-weight: bold;
 }
 
+/* Clients logos container */
 .clients-logos {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the client groups */
 }
 
+/* Individual client group */
 .client-group {
   display: flex;
   align-items: center;
@@ -157,35 +184,41 @@ body {
   margin-bottom: 20px;
 }
 
+/* Client icons */
 .client-group i {
   font-size: 24px;
   margin-right: 10px;
 }
 
+/* Last client icon margin reset */
 .client-group i:last-child {
   margin-right: 0;
 }
 
+/* Short text section */
 .short text {
   display: flex;
 }
 
+/* Short text section heading */
 .center-title-specialists {
   text-align: center;
 }
 
+/* Short text section description */
 .desc-specialists {
   text-align: center;
   font-size: 20px;
 }
 
-/* Updated .card-content to display cards in a row */
+/* Card content section */
 .card-content {
   display: flex;
   justify-content: center; /* Center the cards */
   gap: 100px; /* Add space between the cards */
 }
 
+/* Individual card container */
 .class-img-container {
   background-color: #ffffff;
   padding: 20px;
@@ -199,14 +232,14 @@ body {
   margin: 20px;
 }
 
-/* New class for the FontAwesome bulb icon */
+/* FontAwesome bulb icon */
 .card-icon {
   font-size: 40px;
   color: #ff6347; /* Adjust color as needed */
   margin-bottom: 10px;
 }
 
-/* Responsive styles */
+/* Responsive styles for screens smaller than 1200px */
 @media (max-width: 1200px) {
   .hero {
     flex-direction: column;
@@ -233,6 +266,7 @@ body {
   }
 }
 
+/* Responsive styles for screens smaller than 768px */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -285,6 +319,7 @@ body {
   }
 }
 
+/* Responsive styles for screens smaller than 480px */
 @media (max-width: 480px) {
   .navbar a {
     margin-right: 0;
@@ -318,5 +353,32 @@ body {
 
   .client-group i {
     font-size: 16px;
+  }
+}
+
+/* Styles for the hamburger menu */
+.hamburger {
+  display: none; /* Hide by default */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Show the hamburger menu on smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show on smaller screens */
+  }
+
+  .navbar-right {
+    display: none; /* Hide the links by default */
+  }
+
+  .navbar-right.active {
+    display: flex; /* Show the links when active */
+    flex-direction: column; /* Stack the links vertically */
+  }
+
+  .navbar-right a {
+    margin: 10px 0; /* Add space between links */
   }
 }
