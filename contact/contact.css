@@ -1,0 +1,221 @@
+/* Add any additional CSS required for the contact page here */
+
+/* Common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar-left .link-tab {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.navbar-center {
+  font-size: 2rem;
+}
+
+.navbar-right a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.hero-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-right {
+  max-width: 50%;
+}
+
+.hero-buttons button,
+.hero-buttons a {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+}
+
+.hero-social p,
+.hero-social a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Clients section */
+.clients {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.clients-logos {
+  display: flex;
+  justify-content: center;
+}
+
+.client-group {
+  margin: 0 1rem;
+}
+
+.title-line {
+  border: 0;
+  height: 1px;
+  background: #000;
+  margin: 0 1rem;
+}
+
+/* Specialists section */
+.short.text {
+  text-align: center;
+  padding: 2rem;
+}
+.p-desc {
+  font-size: 30px;
+  color: red;
+}
+
+/* Card content section */
+.card-content {
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-card {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Contact section */
+.contact-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+button {
+  margin-top: 1rem;
+  box-sizing: 100px;
+  padding: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navbar-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right {
+    max-width: 100%;
+  }
+
+  .clients-logos {
+    flex-direction: column;
+  }
+
+  .client-group {
+    margin-bottom: 1rem;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+  }
+}

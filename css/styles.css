@@ -239,6 +239,83 @@ body {
   margin-bottom: 10px;
 }
 
+.projects {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #ff6347; /* Adjust color as needed */
+  margin-bottom: 10px;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Add this to your existing CSS file */
+.explore-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.explore-link {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.explore-link:hover {
+  text-decoration: underline;
+}
+
 /* Responsive styles for screens smaller than 1200px */
 @media (max-width: 1200px) {
   .hero {
