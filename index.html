@@ -27,7 +27,6 @@
         <div class="navbar-right" id="navbar-links">
             <!-- Navigation links -->
             <a href="#Home">Home</a>
-            
             <a href="./about/projects/projects.html">Projects</a>
             <a href="./about/projects/projects.html">Services</a>
             <a href="./contact/contact.html">Contact</a>
@@ -51,11 +50,11 @@
             <!-- Heading -->
             <h1>Who am I ?</h1>
             <!-- Paragraph -->
-            <p>Here is Nickson, an enthusiatic Software Developer . In the field of softwares, ifound an interest of buiding solutions to your problem. I am building in React.js,Nextjs JavaScript, React-redux, TypeScript, Tailwindcss, Bootstrap4, Html5, css3,  Node.js, Django Rest Frame Work .</p>
+            <p>Here is Nickson, an enthusiastic Software Developer. In the field of software, I found an interest in building solutions to your problem. I am building in React.js, Next.js, JavaScript, React-redux, TypeScript, Tailwindcss, Bootstrap4, Html5, css3, Node.js, Django Rest Framework.</p>
             <!-- Buttons in the hero section -->
             <div class="hero-buttons">
                 <!-- Book a Call button -->
-                <button>Book a Call</button>
+                <button id="book-call-button">Book a Call</button>
                 <!-- Link to works section -->
                 <a href="/about/projects/projects.html">Explore My Projects Here</a>
             </div>
@@ -114,28 +113,26 @@
 
     <!-- Card content section -->
     <section class="card-content">
-
-
         <div class="projects-grid">
             <div class="project-card">
                 <a href="https://real-estate-website-3q69.vercel.app/" target="_blank">
                     <i class="fas fa-link card-icon"></i>
                     <h3>Sample Dynamic Next.js Blog</h3>
-                    <p>This blog is a dynamic blog website that has my activities.</p>
+                    <p>This blog is a dynamic blog website that has my activities.<br> It is a static website that surely emphasizes on routing and component logic flow with Next.js</p>
                 </a>
             </div>
             <div class="project-card">
                 <a href="https://real-estate-front-lime.vercel.app/" target="_blank">
                     <i class="fas fa-link card-icon"></i>
                     <h3>Full Stack Real Estate With Mern-Stack</h3>
-                    <p>This is a full functional real estate app that allows users to find homes online.</p>
+                    <p>This is a full functional real estate app that allows users to find homes online, I together with my team collaborated and came up with a full functioning web app.</p>
                 </a>
             </div>
 
             <div class="project-card">
                 <a href="https://mern-social-media-zeta.vercel.app/" target="_blank">
                     <i class="fas fa-link card-icon"></i>
-                    <h3>Responsive Social Mesdia Website</h3>
+                    <h3>Responsive Social Media Website</h3>
                     <p>This static site was built using React.js and react-redux.</p>
                 </a>
             </div>
@@ -144,7 +141,15 @@
                 <a href="https://estate.100jsprojects.com/" target="_blank">
                     <i class="fas fa-link card-icon"></i>
                     <h3>Full Stack Housing App with Mern-Stack</h3>
-                    <p>In this project i built an interactive site with search functionalities, fetching backend data for various activities.</p>
+                    <p>In this project I built an interactive site with search functionalities, fetching backend data for various activities.</p>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="https://zentea.ch/" target="_blank">
+                    <i class="fas fa-link card-icon"></i>
+                    <h3>Full Stack Ecomerce DjacketApp Shop Djackets online</h3>
+                    <p>I collaborated together with team and came up with Vue/Django complete ecomerce app with stripe as payment checkout.</p>
                 </a>
             </div>
 
@@ -171,19 +176,7 @@
                     <p>My special project ever to have experience vue.js in a different perspective.</p>
                 </a>
             </div>
-
-            
-
-
         </div>
-
-
-
-
-
-
-
-
     </section>
 
     <!-- JavaScript to toggle the navbar links on smaller screens -->
@@ -197,6 +190,15 @@
         hamburger.addEventListener('click', () => {
             // Toggle the 'active' class on the navbar links element
             navbarLinks.classList.toggle('active');
+        });
+
+        // Get the Book a Call button element
+        const bookCallButton = document.getElementById('book-call-button');
+
+        // Add a click event listener to the Book a Call button
+        bookCallButton.addEventListener('click', () => {
+            // Redirect to the email client with the specified email address
+            window.location.href = 'mailto:okwembanickson8@gmail.com';
         });
     </script>
 </body>
